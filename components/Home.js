@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 35,
         paddingVertical: 20,
         marginBottom: 10,
-
+        fontWeight: '700',
     },
     btn: {
         backgroundColor: '#3498db', // Button background color
