@@ -20,7 +20,7 @@ const Movie = () => {
             <TextInput
                 style={styles.searchInput}
                 placeholder='movie name'
-                placeholderTextColor='#87CEEB'
+                placeholderTextColor='#87addb'
                 value={searchText}
                 onChangeText={handlesearchInput}
             />
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         minWidth: '85%',
         borderBottomWidth: 2,
         borderColor: 'black',
-        paddingHorizontal: 10,
+        paddingHorizontal: 5,
         fontWeight: '500'
     },
     searchButton: {
