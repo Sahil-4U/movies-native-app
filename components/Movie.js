@@ -3,12 +3,17 @@ import React, { useState } from 'react'
 
 const Movie = () => {
     const [searchText, setSearchText] = useState('');
+    const [movieData, setMovieData] = useState();
     const handlesearchInput = (inputText) => {
         setSearchText(inputText);
     }
-    const handlesearchPress = () => {
+    const handlesearchPress = async () => {
         console.log(searchText);
+        let res = await fetch(`https://www.omdbapi.com/?apikey=af180f05&s=${searchText}`);
+        let movies = await res.json();
+        setMovieData(movies.Search);
         setSearchText('');
+        console.log(movieData);
     }
     return (
         <View style={styles.container}>
@@ -24,9 +29,7 @@ const Movie = () => {
                     search
                 </Text>
             </TouchableOpacity>
-            <Text>
-                {searchText && searchText}
-            </Text>
+
         </View>
     )
 }
