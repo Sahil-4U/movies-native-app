@@ -34,9 +34,9 @@ const Movie = () => {
                 data={movieData}
                 renderItem={({ item }) => {
                     return (
-                        <View>
+                        <View style={{ margin: 8 }}>
                             <Image style={{ height: 250, width: 300 }} source={{ uri: item.Poster }} />
-                            <Text>{item.Title}</Text>
+                            <Text style={{ fontWeight: '600' }}>{item.Title}</Text>
                             <Text>YEAR : {item.Year}</Text>
                         </View>
                     )
